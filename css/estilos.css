@@ -1,0 +1,17 @@
+body {
+    background-image: url('../imagen/fondo.jpg');
+background-attachment: fixed;
+}
+h1{color:#A37000; font-size: 45px;text-align: center;}
+
+.amarillo {color:#FFAE00;background-color:  #FFEDB8;
+text-decoration: underline; font-size: 28px;}
+
+.naranja {color:coral;background-color: #F8CEBE;
+text-decoration: underline; font-size: 28px;}
+p, li {color: #5c4033;font-size: 18px;font-family: fantasy;line-height: 1.6; text-align: left;}
+
+  .foto-chipa {
+    width: 250px !important;
+    height: auto !important;
+}
