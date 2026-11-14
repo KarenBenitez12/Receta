@@ -1,17 +1,103 @@
 body {
-    background-image: url('../imagen/fondo.jpg');
-background-attachment: fixed;
+  margin: 0; /* Elimina los bordes blancos de la pantalla para que el header llegue a los extremos */
+  background-image: url('../imagen/fondo.jpg');
+  background-attachment: fixed;
 }
-h1{color:#A37000; font-size: 45px;text-align: center;}
 
-.amarillo {color:#FFAE00;background-color:  #FFEDB8;
-text-decoration: underline; font-size: 28px;}
 
-.naranja {color:coral;background-color: #F8CEBE;
-text-decoration: underline; font-size: 28px;}
-p, li {color: #5c4033;font-size: 18px;font-family: fantasy;line-height: 1.6; text-align: left;}
 
-  .foto-chipa {
-    width: 250px !important;
-    height: auto !important;
+.rosa {
+  color: #A37000;
+  background-color:#f2d774;
+  font-size: 80px;
+  text-align: center;
+  justify-content:center ;
+  text-decoration: underline;
+  /* Se eliminó el background-color de aquí para que no tape el fondo amarillo del header */
+}
+
+.rosa:hover {
+  color: #FFE7B8;
+  background-color: #D18B00; /* Efecto opcional: crea un recuadro oscuro al pasar el mouse */
+}
+
+.amarillo {
+  color: #FFAE00;
+  background-color: #FFEDB8;
+  text-decoration: underline;
+  font-size: 28px;
+  padding: 2px 8px; /* Le da un pequeño margen interno al fondo de los subtítulos */
+  display: inline-block; /* Evita que el fondo de "Ingredientes" o "Preparación" se estire al 100% del ancho */
+}
+
+.amarillo:hover {
+  color: #FFE7B8;
+  background-color: #D18B00;
+}
+
+p, li {
+  color: #5c4033;
+  font-size: 18px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Cambiado por una tipografía limpia y fácil de leer */
+  line-height: 1.6;
+  text-align: left;
+}
+
+.foto-chipa {
+  width: 250px !important;
+  height: auto !important;
+  border-radius: 6px; /* Opcional: le da una terminación sutilmente redondeada a tus imágenes */
+}
+nav {
+  background-color: beige;
+  padding: 10px 0;      /* Controla el grosor: 10px arriba/abajo es la mitad que el título */
+  width: 100%;          /* Se asegura de ocupar todo el ancho de la pantalla */
+  text-align: center;   /* Centra los enlaces que vayas a poner adentro */
+  box-sizing: border-box;
+}
+section {
+background-color: #FFFDF6;
+padding: 20px;
+}
+aside {
+background-color: #FDF0ED;
+padding: 20px;
+}
+footer {
+  display: flex;
+  justify-content: space-between; /* Empuja los elementos a los extremos y al centro */
+  align-items: center; /* Mantiene todo alineado verticalmente al medio */
+  background-color: #5C4033;
+  padding: 20px;
+}
+ footer p {
+color: #FFEDB8;
+}
+header {
+  background-color: yellow;
+  padding: 15px 0;
+  width: 100%;
+justify-content: space-around;
+align-items: center;
+display: flex;
+
+
+}
+.logo {display: flex;
+ width: 150px;
+ height: 150px;
+ max-width: 100px
+ justify-content:  space-around;
+  }
+.redes {
+  width: 70px;
+  height: 70px;
+  }
+.app
+{justify-content: space-between;
+   width: 70px;
+   height: 70px;
+  }
+  .sociales a {
+  display: inline-flex;
 }
