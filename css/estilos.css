@@ -1,112 +1,59 @@
-body {
-  margin: 0; /* Elimina los bordes blancos de la pantalla para que el header llegue a los extremos */
-  background-image: url('../imagen/fondo.jpg');
-  background-attachment: fixed;
-}
-
-
-
-.rosa {
-  color: #A37000;
-  background-color:#f2d774;
-  font-size: 80px;
-  text-align: center;
-  justify-content:center ;
-  text-decoration: underline;
-  /* Se eliminó el background-color de aquí para que no tape el fondo amarillo del header */
-}
-
-.rosa:hover {
-  color: #FFE7B8;
-  background-color: #D18B00; /* Efecto opcional: crea un recuadro oscuro al pasar el mouse */
-}
-
-.amarillo {
-  color: #FFAE00;
-  background-color: #FFEDB8;
-  text-decoration: underline;
-  font-size: 28px;
-  padding: 2px 8px; /* Le da un pequeño margen interno al fondo de los subtítulos */
-  display: inline-block; /* Evita que el fondo de "Ingredientes" o "Preparación" se estire al 100% del ancho */
-}
-
-.amarillo:hover {
-  color: #FFE7B8;
-  background-color: #D18B00;
-}
-
-p, li {
-  color: #5c4033;
-  font-size: 18px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Cambiado por una tipografía limpia y fácil de leer */
-  line-height: 1.6;
-  text-align: left;
-}
-
-.foto-chipa {
-  width: 250px !important;
-  height: auto !important;
-  border-radius: 6px; /* Opcional: le da una terminación sutilmente redondeada a tus imágenes */
-}
-nav {
-  background-color: beige;
-  padding: 10px 0;      /* Controla el grosor: 10px arriba/abajo es la mitad que el título */
-  width: 100%;          /* Se asegura de ocupar todo el ancho de la pantalla */
-  text-align: center;   /* Centra los enlaces que vayas a poner adentro */
+/* Reset global para evitar desbordamientos en pantalla */
+* {
   box-sizing: border-box;
 }
-section {
-background-color: #FFFDF6;
-padding: 20px;
+
+body {
+  margin: 0;
+  background-color: #F4ECE1;
+  background-image: url('../imagen/fondo.jpg');
+  background-attachment: fixed;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 100%;
+  overflow-x: hidden;
 }
-aside {
-background-color: #FDF0ED;
-padding: 20px;
-}
-footer {
-  display: flex;
-  justify-content: space-between; /* Empuja los elementos a los extremos y al centro */
-  align-items: center; /* Mantiene todo alineado verticalmente al medio */
-  background-color: #5C4033;
-  padding: 20px;
-}
- footer p {
-color: #FFEDB8;
-}
+
+/* HEADER */
 header {
-  background-color: yellow;
-  padding: 15px 0;
+  background-color: #4A2E1B;
+  border-bottom: 5px solid #E09F3E;
+  padding: 15px 25px;
   width: 100%;
-justify-content: space-around;
-align-items: center;
-display: flex;
-
-
-}
-.logo {display: flex;
- width: 250px;
- height: 250px;
- max-width: 100px
- justify-content:  space-around;
-  }
-.redes {
-  width: 70px;
-  height: 70px;
-  }
-.app
-{justify-content: space-between;
-   width: 70px;
-   height: 70px;
-  }
-  .sociales a {
-  display: inline-flex;
-}
-/* Envuelve las redes y el botón en una columna a la derecha */
-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #E09F3E;
+  transition: transform 0.4s ease;
+}
+
+.logo:hover {
+  transform: rotate(-8deg) scale(1.05);
+}
+
+.rosa {
+  color: #FFF3B0;
+  background-color: transparent;
+  font-size: 72px;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 4px;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* EFECTO CSS: Resplandor dorado al pasar el mouse por el título */
+.rosa:hover {
+  color: #E09F3E;
+  text-shadow: 0 0 15px #E09F3E, 0 0 25px #E09F3E;
 }
 
 .header-derecha {
@@ -116,18 +63,315 @@ header {
   gap: 10px;
 }
 
+.sociales {
+  display: flex;
+  gap: 8px;
+}
+
+.sociales a {
+  display: inline-flex;
+}
+
+.redes {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+/* EFECTO CSS: Rotación y zoom en íconos sociales */
+.sociales a:hover .redes {
+  transform: rotate(15deg) scale(1.1);
+}
+
 .btn-contacto-header {
-  background-color: #5C4033;
-  color: #FFEDB8;
-  padding: 8px 14px;
+  background-color: #E09F3E;
+  color: #3B2313;
+  padding: 8px 16px;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 5px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 20px;
   font-size: 14px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-contacto-header:hover {
-  background-color: #A37000;
-  color: #FFFDF6;
+  background-color: #9E2A2B;
+  color: #FFFBF2;
+  transform: scale(1.05);
 }
+
+/* NAV */
+nav {
+  background-color: #F7E8D0;
+  border-bottom: 2px solid #DFC8A2;
+  padding: 12px 20px;
+  width: 100%;
+  text-align: center;
+}
+
+nav p {
+  text-align: center;
+  margin: 0;
+  color: #5C3A21;
+  font-weight: 500;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  position: relative;
+  color: #9E2A2B;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* EFECTO CSS: Subrayado animado deslizante en enlaces */
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: #9E2A2B;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #D9822B;
+  transform: scale(1.05);
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* =========================================================
+   MAQUETACIÓN PRINCIPAL CON FLEXBOX (MODELO DE CAJAS)
+   ========================================================= */
+
+.contenedor-principal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 24px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 25px auto;
+  padding: 0 15px;
+}
+
+/* CAJA IZQUIERDA: SECTION */
+section {
+  flex: 2;
+  min-width: 0;
+  background-color: #FFFBF2;
+  border: 1px solid #E6D5B8;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(74, 46, 27, 0.1);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* EFECTO CSS: Elevación flotante */
+section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(74, 46, 27, 0.18);
+}
+
+.ingredientes,
+.preparacion {
+  background-color: #FFF6E5;
+  border-left: 5px solid #E09F3E;
+  border-radius: 8px;
+  padding: 18px;
+}
+
+.preparacion {
+  border-left-color: #9E2A2B;
+}
+
+/* Fila interior para las 2 fotos */
+.fila-fotos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.foto {
+  flex: 1;
+  background-color: #F7EFE2;
+  border: 1px solid #E6D5B8;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.foto-chipa {
+  width: 100%;
+  max-width: 260px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* EFECTO CSS: Zoom y brillo en las fotos */
+.foto-chipa:hover {
+  transform: scale(1.05);
+  filter: brightness(1.06);
+}
+
+/* CAJA DERECHA: ASIDE */
+aside {
+  flex: 1;
+  min-width: 0;
+  background-color: #F7EFE2;
+  border: 1px solid #DFC8A2;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(74, 46, 27, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* EFECTO CSS: Elevación flotante */
+aside:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(74, 46, 27, 0.18);
+}
+
+.videos {
+  background-color: #FFFBF2;
+  border: 1px solid #E6D5B8;
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.videos p {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #4A2E1B;
+}
+
+.videos iframe,
+.videos audio {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+/* TEXTOS Y SUBTÍTULOS */
+.amarillo {
+  color: #9E2A2B;
+  background-color: #FDE8C8;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 4px 12px;
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+p, li {
+  color: #3E2723;
+  font-size: 17px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: #4A2E1B;
+  border-top: 5px solid #E09F3E;
+  padding: 25px;
+  width: 100%;
+}
+
+footer iframe {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+footer h2 {
+  color: #FFF3B0;
+  font-size: 20px;
+}
+
+.apps {
+  display: flex;
+  gap: 12px;
+}
+
+.app {
+  width: 45px;
+  height: 45px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.app:hover {
+  transform: scale(1.12);
+}
+
+/* 1. Haz que el contenedor principal ocupe casi todo el ancho de la pantalla */
+.contenedor-principal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 24px;
+  width: 95%;          /* Ocupa el 95% de la pantalla */
+  max-width: 1600px;   /* Permite que crezca mucho más en monitores grandes */
+  margin: 25px auto;
+  padding: 0 15px;
+}
+
+/* 2. Mantén el media query en 768px (solo para celulares/tablets) */
+@media (max-width: 768px) {
+  .contenedor-principal {
+    flex-direction: column;
+  }
+
+  .fila-fotos {
+    flex-direction: column;
+  }
+
+  .rosa {
+    font-size: 42px;
+  }
+}
+   
